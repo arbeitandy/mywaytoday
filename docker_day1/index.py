@@ -115,7 +115,7 @@ aws s3api put-bucket-website --bucket 2018-test-bucket-andydocket \
 * update
 
 aws s3 sync html_output/ s3://2018-test-bucket-andydocket
-aws s3 sync assets s3://2018-test-bucket-andydocket
+aws s3 sync assets s3://2018-test-bucket-andydocket/assets
 
 """
 made by [Pycco][pycco]
