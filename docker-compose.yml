@@ -1,6 +1,6 @@
 nginx:
   image: static-nginx
-  container_name: day4
+  container_name: day1
   volumes:
    - ./html_output:/usr/share/nginx/html
    - ./assets:/usr/share/nginx/html/assets

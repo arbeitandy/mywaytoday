@@ -23,8 +23,7 @@ minimal Dockerfile nginx alpine
     COPY output /usr/share/nginx/html
 
 """
-run command
-src: https://hub.docker.com/_/nginx/
+basic build command
 """
 
     docker build -t static-nginx .
@@ -66,7 +65,9 @@ add the specified image and container name
     docker image image_id tag image_name
     docker-compose up -d
 
+
 # === Day1 Section 3 ===
+
 
 """
 1. ** docker ** - use docker cmd to clean up
