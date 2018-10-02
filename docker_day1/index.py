@@ -118,6 +118,16 @@ aws s3 sync html_output/ s3://2018-test-bucket-andydocket
 aws s3 sync assets s3://2018-test-bucket-andydocket/assets
 
 """
+# === hour 6 day 1 ===
+sync with github
+
+git remote add github git@github.com:arbeitandy/mywaytoday.git
+git pull github master --allow-unrelated-histories
+
+git push github master --all
+
+"""
+"""
 made by [Pycco][pycco]
 
 [Home][home]
@@ -125,4 +135,5 @@ made by [Pycco][pycco]
 [pycco]: https://pycco-docs.github.io/pycco/
 [home]: http://d.fogtown.us/
 """
+
 
