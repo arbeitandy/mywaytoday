@@ -99,8 +99,8 @@ use aws s3 to host the site
 1. [aws_website-policy.json][policy]
 2. [aws_website.json][website]
 
-[policy]: assets/aws_website-policy.json
-[website]: assets/aws_website-policy.json
+[policy]: http://2018-test-bucket-andydocket.s3-website.us-west-1.amazonaws.com/assets/aws_website-policy.json
+[website]: http://2018-test-bucket-andydocket.s3-website.us-west-1.amazonaws.com/assets/aws_website.json
 
 """
 
