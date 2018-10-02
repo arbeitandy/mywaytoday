@@ -1,0 +1,7 @@
+nginx:
+  image: static-nginx
+  container_name: day3
+  volumes:
+   - ./html_output:/usr/share/nginx/html
+  ports:
+   - "8080:80"
