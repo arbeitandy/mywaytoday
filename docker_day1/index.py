@@ -88,3 +88,41 @@ generate document from pyfile
         -d  # output directory
         -i  # generate index
     python -m http.server 8000      # test
+
+# === hour 5 day 1 ===
+
+"""
+use aws s3 to host the site
+
+* currently use google domain 301 redirect to serve the files
+
+1. [aws_website-policy.json][policy]
+2. [aws_website.json][website]
+
+[policy]: assets/aws_website-policy.json
+[website]: assets/aws_website-policy.json
+
+"""
+
+* init
+
+aws s3 mb s3://2018-test-bucket-andydocket
+aws s3api put-bucket-policy --bucket 2018-test-bucket-andydocket \
+    --policy file://assets/aws_website-policy.json
+aws s3api put-bucket-website --bucket 2018-test-bucket-andydocket \
+    --website-configuration file://assets/aws_website.json
+
+* update
+
+aws s3 sync html_output/ s3://2018-test-bucket-andydocket
+aws s3 sync assets s3://2018-test-bucket-andydocket
+
+"""
+made by [Pycco][pycco]
+
+[Home][home]
+
+[pycco]: https://pycco-docs.github.io/pycco/
+[home]: http://d.fogtown.us/
+"""
+
