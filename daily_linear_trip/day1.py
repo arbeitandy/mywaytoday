@@ -1,3 +1,4 @@
+
 # === Day1 Ideas covered ===
 
 """
@@ -27,8 +28,8 @@ basic build command
 """
 
     docker build -t static-nginx .
-    docker run --name day1 -d -p 8080:80 static-nginx
-    docker stop day1
+    docker run --name dlt -d -p 8080:80 static-nginx
+    docker stop dlt
   
     docker build
                             -t tag      # add tag as image name
@@ -96,10 +97,10 @@ add the specified image and container name
 generate document from pyfile
 """
     pip install pycco
-    pycco docker_day1/*.py -d html_output -p -i
-                            -p  # preservce path
-                            -d  # output directory
-                            -i  # generate index
+    pycco daily_linear_trip/*.py -d html_output -p -i
+                    -p  # preservce path
+                    -d  # output directory
+                    -i  # generate index
     # local test
     python -m http.server 8000      
 

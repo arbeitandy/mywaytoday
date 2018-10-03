@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>quick_pythons.py</title>
+  <link rel="stylesheet" href="../pycco.css">
+</head>
+<body>
+<div id='container'>
+  <div id="background"></div>
+  <div class='section'>
+    <div class='docs'><h1>quick_pythons.py</h1></div>
+  </div>
+  <div class='clearall'>
+  <div class='section' id='section-0'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-0'>#</a>
+      </div>
+      <p>some quick basic stuffs</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span></span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-1'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-1'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-2'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-2'>#</a>
+      </div>
+      <h3><span id="install/update-python" href="install/update-python"> install/update python </span></h3>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">python</span> <span class="n">python</span><span class="o">-</span><span class="n">dev</span> <span class="n">python3</span> <span class="n">python3</span><span class="o">-</span><span class="n">dev</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-3'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-3'>#</a>
+      </div>
+      <h3><span id="virtualenv" href="virtualenv"> virtualenv </span></h3>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenv</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">I</span> <span class="n">isa</span><span class="o">==</span><span class="mf">3.4</span><span class="o">.</span><span class="mi">2</span>                         <span class="c1"># pip install module of ver</span>
+<span class="n">cd</span> <span class="n">this_project</span>
+<span class="n">virtualenv</span> <span class="n">venv</span>                                   <span class="c1"># py2 create new venv</span>
+<span class="n">virtualenv</span> <span class="n">venv</span> <span class="o">--</span><span class="n">python</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python2</span><span class="o">.</span><span class="mi">6</span>       <span class="c1"># using py2</span>
+<span class="n">source</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">requests</span>
+<span class="n">pip</span> <span class="n">freeze</span> <span class="o">&gt;</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">deactivate</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>                   <span class="c1"># install for other venv</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-4'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-4'>#</a>
+      </div>
+      <p>python3 virtualenv</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">py3venv</span>                           <span class="c1"># py3 create new venv</span>
+<span class="n">source</span> <span class="n">py3venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pip</span>                         <span class="c1"># upgrade module pip</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-5'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-5'>#</a>
+      </div>
+      <h3><span id="concept" href="concept"> concept </span></h3>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">is</span> <span class="n">used</span> <span class="n">to</span> <span class="kn">import</span> <span class="nn">a</span> <span class="nn">module</span> <span class="nn">in</span> <span class="nn">a</span> <span class="nn">directory.</span>
+    <span class="n">package</span> <span class="kn">import</span> <span class="nn">module</span> <span class="nn">in</span> <span class="nn">dir1</span><span class="o">/</span><span class="n">dir2</span><span class="o">/</span><span class="n">mod</span><span class="o">.</span><span class="n">py</span><span class="o">.</span> 
+    <span class="k">with</span> <span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="n">each</span> <span class="n">directory</span> <span class="n">we</span> <span class="n">can</span> <span class="kn">import</span> <span class="nn">like</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">dir1.dir2.mod</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-6'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-6'>#</a>
+      </div>
+      <h3><span id="pythonic" href="pythonic"> pythonic </span></h3>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-7'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-7'>#</a>
+      </div>
+      <p>list</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">newlist</span> <span class="o">=</span> <span class="p">[</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">somel</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span>       <span class="c1"># remove item from list if f(x)</span>
+<span class="n">somelist</span><span class="p">[:]</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">somelist</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span> <span class="c1"># mutate existing list</span>
+<span class="n">somelist</span><span class="p">[:]</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">somelist</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">]</span>
+<span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="k">for</span> <span class="n">x</span> <span class="n">i</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>                         <span class="c1"># generator</span>
+
+<span class="n">l</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]]</span>               <span class="c1"># make a flat list out of lists</span>
+<span class="n">flatl</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">subl</span> <span class="ow">in</span> <span class="n">l</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">subl</span><span class="p">]</span>         <span class="c1"># 10000 loops, 143 usec per loop (faster)</span>
+
+<span class="n">newlist</span> <span class="o">=</span> <span class="n">oldlist</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>                         <span class="c1"># reverse a list</span>
+<span class="n">newlist</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="n">arr</span><span class="p">)),</span> <span class="nb">float</span><span class="p">)</span>   <span class="c1"># numpy reverse a list</span>
+<span class="n">uniques</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">somelist</span><span class="p">))</span>                  <span class="c1"># filter out duplicated</span>
+<span class="mf">4.0</span><span class="o">//</span><span class="mf">1.5</span>                                        <span class="c1"># unconditionally floor: 2.0</span>
+
+<span class="kn">import</span> <span class="nn">itertools</span>                                <span class="c1"># combination of length r</span>
+<span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">l</span><span class="p">):</span> <span class="k">print</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>        <span class="c1"># access list index, enumerate(l, start=0)</span>
+
+<span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="n">lstr</span><span class="p">))</span>                        <span class="c1"># remove empty string from list</span>
+<span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lstr</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>                          <span class="c1"># remove empty and space strings from list</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-8'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-8'>#</a>
+      </div>
+      <p>list and string and dict</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">somestr</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>                       <span class="c1"># remove extra spaces</span>
+<span class="n">k</span> <span class="ow">in</span> <span class="n">d</span>                                          <span class="c1"># True if key k in dict d</span>
+<span class="n">c</span> <span class="ow">in</span> <span class="nb">str</span>                                        <span class="c1"># True if char c in string str</span>
+<span class="n">sstr</span> <span class="ow">in</span> <span class="nb">str</span>                                     <span class="c1"># True if substr in str</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>                                          <span class="c1"># init</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;one&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">d</span><span class="p">[</span><span class="s2">&quot;one&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">d</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">)</span>                                    <span class="c1"># del</span>
+<span class="k">del</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;key&quot;</span><span class="p">]</span>
+<span class="n">d</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">d2</span><span class="p">)</span>                                    <span class="c1"># append</span>
+<span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;unsure_key&quot;</span><span class="p">,</span> <span class="s2">&quot;default_val&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>                                     <span class="c1"># iter</span>
+<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">xs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> <span class="k">print</span><span class="p">(</span><span class="s2">&quot;{0}: {1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">_</span> <span class="ow">in</span> <span class="n">xs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> <span class="k">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">((</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">))</span> <span class="o">&lt;=</span> <span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>                 <span class="c1"># True if keys in d</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-9'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-9'>#</a>
+      </div>
+      <p>iter d and update v if cond</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> <span class="k">if</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-10'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-10'>#</a>
+      </div>
+      <p>sorting</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">xs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
+
+<span class="nb">sorted</span><span class="p">(</span><span class="n">xs</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>          <span class="c1"># sort by v</span>
+<span class="nb">sorted</span><span class="p">(</span><span class="n">xs</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>          <span class="c1"># sort by k</span>
+<span class="nb">sorted</span><span class="p">(</span><span class="n">xs</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>                <span class="c1"># sort by k reverse</span>
+<span class="nb">max</span><span class="p">(</span><span class="n">xs</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>             <span class="c1"># max value</span>
+<span class="nb">min</span><span class="p">(</span><span class="n">xs</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>             <span class="c1"># min value</span>
+<span class="nb">min</span><span class="p">(</span><span class="n">xs</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>                                  <span class="c1"># min k</span>
+<span class="nb">min</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>                               <span class="c1"># get the key to min value in d</span>
+<span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">list1</span><span class="p">,</span> <span class="n">list2</span><span class="p">))</span>                         <span class="c1"># create dict from two lists</span>
+<span class="k">if</span> <span class="n">k1</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>                     <span class="c1"># check key existence</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-11'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-11'>#</a>
+      </div>
+      <p>create a dict from a set or list</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">tasks_d</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="mi">0</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="n">tasks</span><span class="p">)}</span>     
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tasks</span><span class="p">:</span> <span class="n">tasks_d</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="n">tasks_d</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">tasks_d</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>   <span class="c1"># sort by key</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-12'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-12'>#</a>
+      </div>
+      <p>concatenate d1-3</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">d4</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">d1</span><span class="p">,</span> <span class="o">**</span><span class="n">d2</span><span class="p">)</span>                     
+<span class="n">d4</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">d3</span><span class="p">)</span> 
+<span class="n">d4</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="p">(</span><span class="n">d1</span><span class="p">,</span><span class="n">d2</span><span class="p">,</span><span class="n">d3</span><span class="p">):</span> <span class="n">d4</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">d</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-13'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-13'>#</a>
+      </div>
+      <p>print tuple in string format</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>                             
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;this is a tuple: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">t</span><span class="p">,))</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-14'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-14'>#</a>
+      </div>
+      <p>check file permision</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">stat</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-15'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-15'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span> <span class="nf">isgroupreadable</span><span class="p">(</span><span class="n">fp</span><span class="p">):</span>
+    <span class="n">st</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">st_mode</span> <span class="o">&amp;</span> <span class="n">stat</span><span class="o">.</span><span class="n">S_IRGRP</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-16'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-16'>#</a>
+      </div>
+      <p>read file and close file immediately after reading</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span> <span class="k">as</span> <span class="n">x</span><span class="p">:</span> <span class="n">f</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>                <span class="c1"># read fp into a single line</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span> <span class="k">as</span> <span class="n">x</span><span class="p">:</span> <span class="n">f</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>           <span class="c1"># list of lines</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-17'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-17'>#</a>
+      </div>
+      <p>write a list to file</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">fh</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>                      
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span> <span class="n">fh</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
+<span class="n">fh</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-18'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-18'>#</a>
+      </div>
+      <p>append to file</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span>                       
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-19'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-19'>#</a>
+      </div>
+      <p>open, write and close</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>               
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span> <span class="n">fh</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-20'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-20'>#</a>
+      </div>
+      <p>write lines without final newline</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">fh</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">fh</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">l</span><span class="p">))</span>  
+<span class="n">fh</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-21'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-21'>#</a>
+      </div>
+      <p>Remove non digit from string</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="kn">import</span> <span class="nn">re</span>                               
+<span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;\D&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;aas30odsa102&#39;</span><span class="p">)</span>                <span class="c1"># \D non digit</span>
+<span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">isdigit</span><span class="p">(),</span> <span class="s1">&#39;aa30&#39;</span><span class="p">))</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-22'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-22'>#</a>
+      </div>
+      <p>input</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter name: &quot;</span><span class="p">)</span>                    <span class="c1"># get input in var</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">input</span><span class="p">():</span> <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>                <span class="c1"># get input as list</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>              <span class="c1"># get input by line</span>
+<span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;print(4+3)&#39;</span><span class="p">)</span>                              <span class="c1"># eval</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-23'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-23'>#</a>
+      </div>
+      <h3><span id="longer-blocks" href="longer-blocks"> longer blocks </span></h3>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-24'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-24'>#</a>
+      </div>
+      <p>run code every n seconds</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="kn">import</span> <span class="nn">threading</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-25'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-25'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span> <span class="nf">repeatprint</span><span class="p">():</span>
+    <span class="n">threading</span><span class="o">.</span><span class="n">Timer</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span> <span class="n">repeatprint</span><span class="p">)</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;I will keep going.&quot;</span><span class="p">)</span>
+<span class="n">repeatprint</span><span class="p">()</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-26'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-26'>#</a>
+      </div>
+      <p>determine if a var is defined</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">try</span><span class="p">:</span>                                
+    <span class="n">theVar</span>
+<span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Not defined&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;defined&quot;</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-27'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-27'>#</a>
+      </div>
+      <p>using tuples for arguments</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">groups</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;group2&quot;</span><span class="p">,</span> <span class="s2">&quot;group3&quot;</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-28'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-28'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span> <span class="nf">myf</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">str1</span><span class="p">,</span> <span class="n">str2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">num</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">str1</span><span class="o">+</span><span class="n">str2</span><span class="p">)</span>
+<span class="n">myf</span><span class="p">(</span><span class="o">*</span><span class="n">groups</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-29'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-29'>#</a>
+      </div>
+      <p>merge two sorted list</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">while</span> <span class="n">a</span> <span class="ow">and</span> <span class="n">b</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">c</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span> <span class="n">c</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">return</span> <span class="n">c</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-30'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-30'>#</a>
+      </div>
+      <p>unsorted</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">a</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">a</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-31'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-31'>#</a>
+      </div>
+      <p>word frequency in a string</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">words</span> <span class="o">=</span> <span class="n">ss</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{}</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">return</span> <span class="n">d</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-32'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-32'>#</a>
+      </div>
+      <p>using get key</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">ss</span><span class="o">.</span><span class="n">split</span><span class="p">():</span> <span class="n">d</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="k">return</span> <span class="n">d</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-33'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-33'>#</a>
+      </div>
+      <p>consolidate dict with list of keys</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">d2</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">cities</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> <span class="n">d2</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">v</span><span class="p">,[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+<span class="k">return</span> <span class="n">d2</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-34'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-34'>#</a>
+      </div>
+      <p>construct dict of a number of digits from list of numbers</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">list_of_ints</span><span class="p">:</span>
+    <span class="n">d</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="k">return</span> <span class="n">d</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-35'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-35'>#</a>
+      </div>
+      <p>return square of nos in a list</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">list_of_ints</span><span class="p">))</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-36'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-36'>#</a>
+      </div>
+      <p>generator function</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span> <span class="k">print</span> <span class="n">x</span><span class="p">,</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-37'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-37'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> 
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> <span class="k">yield</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-38'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-38'>#</a>
+      </div>
+      <p>build a string with numbers from 0 to 100</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)])</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-39'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-39'>#</a>
+      </div>
+      <p>read file</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">try</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+<span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;error reading file&quot;</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-40'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-40'>#</a>
+      </div>
+      <p>get home path</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+<span class="k">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~&#39;</span><span class="p">))</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-41'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-41'>#</a>
+      </div>
+      <p>subsequences of list</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span> <span class="nf">subsequences</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">:</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">))</span>
+                                 <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">))]</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-42'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-42'>#</a>
+      </div>
+      <p>Kth Largest Element in an Array</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-43'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-43'>#</a>
+      </div>
+      <p>running: O(NlgN) space: O(1)</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="nb">sorted</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-44'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-44'>#</a>
+      </div>
+      <p>priority queue/minheap: running: O(NlgK) space: O(K)</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">heapq</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">nums</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-45'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-45'>#</a>
+      </div>
+      <h3><span id="anecdote" href="anecdote"> anecdote </span></h3>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-46'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-46'>#</a>
+      </div>
+      <p>Powers of two table</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">Power</span>           <span class="n">Exact</span> <span class="n">Value</span>         <span class="n">Approx</span> <span class="n">Value</span>        <span class="n">Bytes</span>
+<span class="o">---------------------------------------------------------------</span>
+<span class="mi">7</span>                             <span class="mi">128</span>
+<span class="mi">8</span>                             <span class="mi">256</span>
+<span class="mi">10</span>                           <span class="mi">1024</span>   <span class="mi">1</span> <span class="n">thousand</span>           <span class="mi">1</span> <span class="n">KB</span>
+<span class="mi">16</span>                         <span class="mi">65</span><span class="p">,</span><span class="mi">536</span>                       <span class="mi">64</span> <span class="n">KB</span>
+<span class="mi">20</span>                      <span class="mi">1</span><span class="p">,</span><span class="mo">04</span><span class="mi">8</span><span class="p">,</span><span class="mi">576</span>   <span class="mi">1</span> <span class="n">million</span>            <span class="mi">1</span> <span class="n">MB</span>
+<span class="mi">30</span>                  <span class="mi">1</span><span class="p">,</span><span class="mo">073</span><span class="p">,</span><span class="mi">741</span><span class="p">,</span><span class="mi">824</span>   <span class="mi">1</span> <span class="n">billion</span>            <span class="mi">1</span> <span class="n">GB</span>
+<span class="mi">32</span>                  <span class="mi">4</span><span class="p">,</span><span class="mi">294</span><span class="p">,</span><span class="mi">967</span><span class="p">,</span><span class="mi">296</span>                        <span class="mi">4</span> <span class="n">GB</span>
+<span class="mi">40</span>              <span class="mi">1</span><span class="p">,</span><span class="mi">099</span><span class="p">,</span><span class="mi">511</span><span class="p">,</span><span class="mi">627</span><span class="p">,</span><span class="mi">776</span>   <span class="mi">1</span> <span class="n">trillion</span>           <span class="mi">1</span> <span class="n">TB</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-47'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-47'>#</a>
+      </div>
+      <p>Latency Comparison Numbers</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">L1</span> <span class="n">cache</span> <span class="n">reference</span>                           <span class="mf">0.5</span> <span class="n">ns</span>
+<span class="n">Branch</span> <span class="n">mispredict</span>                            <span class="mi">5</span>   <span class="n">ns</span>
+<span class="n">L2</span> <span class="n">cache</span> <span class="n">reference</span>                           <span class="mi">7</span>   <span class="n">ns</span>                      <span class="mi">14</span><span class="n">x</span> <span class="n">L1</span> <span class="n">cache</span>
+<span class="n">Mutex</span> <span class="n">lock</span><span class="o">/</span><span class="n">unlock</span>                          <span class="mi">100</span>   <span class="n">ns</span>
+<span class="n">Main</span> <span class="n">memory</span> <span class="n">reference</span>                      <span class="mi">100</span>   <span class="n">ns</span>                      <span class="mi">20</span><span class="n">x</span> <span class="n">L2</span> <span class="n">cache</span><span class="p">,</span> <span class="mi">200</span><span class="n">x</span> <span class="n">L1</span> <span class="n">cache</span>
+<span class="n">Compress</span> <span class="mi">1</span><span class="n">K</span> <span class="nb">bytes</span> <span class="k">with</span> <span class="n">Zippy</span>            <span class="mi">10</span><span class="p">,</span><span class="mo">000</span>   <span class="n">ns</span>       <span class="mi">10</span> <span class="n">us</span>
+<span class="n">Send</span> <span class="mi">1</span> <span class="n">KB</span> <span class="nb">bytes</span> <span class="n">over</span> <span class="mi">1</span> <span class="n">Gbps</span> <span class="n">network</span>     <span class="mi">10</span><span class="p">,</span><span class="mo">000</span>   <span class="n">ns</span>       <span class="mi">10</span> <span class="n">us</span>
+<span class="n">Read</span> <span class="mi">4</span> <span class="n">KB</span> <span class="n">randomly</span> <span class="kn">from</span> <span class="nn">SSD</span><span class="o">*</span>           <span class="mi">150</span><span class="p">,</span><span class="mo">000</span>   <span class="n">ns</span>      <span class="mi">150</span> <span class="n">us</span>          <span class="o">~</span><span class="mi">1</span><span class="n">GB</span><span class="o">/</span><span class="n">sec</span> <span class="n">SSD</span>
+<span class="n">Read</span> <span class="mi">1</span> <span class="n">MB</span> <span class="n">sequentially</span> <span class="kn">from</span> <span class="nn">memory</span>     <span class="mi">250</span><span class="p">,</span><span class="mo">000</span>   <span class="n">ns</span>      <span class="mi">250</span> <span class="n">us</span>
+<span class="n">Round</span> <span class="n">trip</span> <span class="n">within</span> <span class="n">same</span> <span class="n">datacenter</span>      <span class="mi">500</span><span class="p">,</span><span class="mo">000</span>   <span class="n">ns</span>      <span class="mi">500</span> <span class="n">us</span>
+<span class="n">Read</span> <span class="mi">1</span> <span class="n">MB</span> <span class="n">sequentially</span> <span class="kn">from</span> <span class="nn">SSD</span><span class="o">*</span>     <span class="mi">1</span><span class="p">,</span><span class="mo">000</span><span class="p">,</span><span class="mo">000</span>   <span class="n">ns</span>    <span class="mi">1</span><span class="p">,</span><span class="mo">000</span> <span class="n">us</span>    <span class="mi">1</span> <span class="n">ms</span>  <span class="o">~</span><span class="mi">1</span><span class="n">GB</span><span class="o">/</span><span class="n">sec</span> <span class="n">SSD</span><span class="p">,</span> <span class="mi">4</span><span class="n">X</span> <span class="n">memory</span>
+<span class="n">Disk</span> <span class="n">seek</span>                           <span class="mi">10</span><span class="p">,</span><span class="mo">000</span><span class="p">,</span><span class="mo">000</span>   <span class="n">ns</span>   <span class="mi">10</span><span class="p">,</span><span class="mo">000</span> <span class="n">us</span>   <span class="mi">10</span> <span class="n">ms</span>  <span class="mi">20</span><span class="n">x</span> <span class="n">datacenter</span> <span class="n">roundtrip</span>
+<span class="n">Read</span> <span class="mi">1</span> <span class="n">MB</span> <span class="n">sequentially</span> <span class="kn">from</span> <span class="mi">1</span> <span class="n">Gbps</span>  <span class="mi">10</span><span class="p">,</span><span class="mo">000</span><span class="p">,</span><span class="mo">000</span>   <span class="n">ns</span>   <span class="mi">10</span><span class="p">,</span><span class="mo">000</span> <span class="n">us</span>   <span class="mi">10</span> <span class="n">ms</span>  <span class="mi">40</span><span class="n">x</span> <span class="n">memory</span><span class="p">,</span> <span class="mi">10</span><span class="n">X</span> <span class="n">SSD</span>
+<span class="n">Read</span> <span class="mi">1</span> <span class="n">MB</span> <span class="n">sequentially</span> <span class="kn">from</span> <span class="nn">disk</span>    <span class="mi">30</span><span class="p">,</span><span class="mo">000</span><span class="p">,</span><span class="mo">000</span>   <span class="n">ns</span>   <span class="mi">30</span><span class="p">,</span><span class="mo">000</span> <span class="n">us</span>   <span class="mi">30</span> <span class="n">ms</span> <span class="mi">120</span><span class="n">x</span> <span class="n">memory</span><span class="p">,</span> <span class="mi">30</span><span class="n">X</span> <span class="n">SSD</span>
+<span class="n">Send</span> <span class="n">packet</span> <span class="n">CA</span><span class="o">-&gt;</span><span class="n">Netherlands</span><span class="o">-&gt;</span><span class="n">CA</span>    <span class="mi">150</span><span class="p">,</span><span class="mo">000</span><span class="p">,</span><span class="mo">000</span>   <span class="n">ns</span>  <span class="mi">150</span><span class="p">,</span><span class="mo">000</span> <span class="n">us</span>  <span class="mi">150</span> <span class="n">ms</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-48'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-48'>#</a>
+      </div>
+      <p>note of time</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="mi">1</span> <span class="n">ns</span> <span class="o">=</span> <span class="mi">10</span><span class="o">^-</span><span class="mi">9</span> <span class="n">seconds</span>
+<span class="mi">1</span> <span class="n">us</span> <span class="o">=</span> <span class="mi">10</span><span class="o">^-</span><span class="mi">6</span> <span class="n">seconds</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mo">000</span> <span class="n">ns</span>
+<span class="mi">1</span> <span class="n">ms</span> <span class="o">=</span> <span class="mi">10</span><span class="o">^-</span><span class="mi">3</span> <span class="n">seconds</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mo">000</span> <span class="n">us</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mo">000</span><span class="p">,</span><span class="mo">000</span> <span class="n">ns</span>
+
+<span class="n">Handy</span> <span class="n">metrics</span> <span class="n">based</span> <span class="n">on</span> <span class="n">numbers</span> <span class="n">above</span><span class="p">:</span>
+
+<span class="n">Read</span> <span class="n">sequentially</span> <span class="kn">from</span> <span class="nn">disk</span> <span class="nn">at</span> <span class="mi">30</span> <span class="n">MB</span><span class="o">/</span><span class="n">s</span>
+<span class="n">Read</span> <span class="n">sequentially</span> <span class="kn">from</span> <span class="mi">1</span> <span class="n">Gbps</span> <span class="n">Ethernet</span> <span class="n">at</span> <span class="mi">100</span> <span class="n">MB</span><span class="o">/</span><span class="n">s</span>
+<span class="n">Read</span> <span class="n">sequentially</span> <span class="kn">from</span> <span class="nn">SSD</span> <span class="nn">at</span> <span class="mi">1</span> <span class="n">GB</span><span class="o">/</span><span class="n">s</span>
+<span class="n">Read</span> <span class="n">sequentially</span> <span class="kn">from</span> <span class="nn">main</span> <span class="nn">memory</span> <span class="nn">at</span> <span class="mi">4</span> <span class="n">GB</span><span class="o">/</span><span class="n">s</span>
+<span class="mi">6</span><span class="o">-</span><span class="mi">7</span> <span class="n">world</span><span class="o">-</span><span class="n">wide</span> <span class="nb">round</span> <span class="n">trips</span> <span class="n">per</span> <span class="n">second</span>
+<span class="mi">2</span><span class="p">,</span><span class="mo">000</span> <span class="nb">round</span> <span class="n">trips</span> <span class="n">per</span> <span class="n">second</span> <span class="n">within</span> <span class="n">a</span> <span class="n">data</span> <span class="n">center</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-49'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-49'>#</a>
+      </div>
+      <h3><span id="linux-command" href="linux-command"> linux command </span></h3>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-50'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-50'>#</a>
+      </div>
+      <p>basic command</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">awk</span> <span class="n">NR</span> <span class="o">==</span> <span class="mi">10</span> <span class="nb">file</span><span class="o">.</span><span class="n">txt</span>                               <span class="c1"># get 10th line</span>
+<span class="n">du</span> <span class="o">-</span><span class="n">k</span> <span class="o">-</span><span class="n">d1</span> <span class="o">|</span> <span class="n">sort</span> <span class="o">-</span><span class="n">nr</span>                                <span class="c1"># sort by dir size</span>
+<span class="n">tree</span> <span class="o">-</span><span class="n">d</span>                                             <span class="c1"># tree the directories</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-51'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-51'>#</a>
+      </div>
+      <p>processes</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">ps</span> <span class="o">-</span><span class="n">auxefw</span>                                          <span class="c1"># list all proc info</span>
+<span class="n">ps</span> <span class="n">axjf</span>                                             <span class="c1"># list proc by tree</span>
+<span class="n">ps</span> <span class="n">aux</span> <span class="o">|</span> <span class="n">grep</span> <span class="s1">&#39;ssh&#39;</span>                                 <span class="c1"># find all ssh pids</span>
+<span class="n">pgrep</span> <span class="o">-</span><span class="n">l</span> <span class="n">sshd</span>
+<span class="n">echo</span> <span class="err">$$</span>                                             <span class="c1"># pid of current shell</span>
+<span class="n">fuser</span> <span class="o">-</span><span class="n">va</span> <span class="mi">22</span><span class="o">/</span><span class="n">tcp</span>                                    <span class="c1"># list of procs using port 22</span>
+<span class="n">strace</span> <span class="n">df</span>                                           <span class="c1"># trace and dbug</span>
+<span class="n">renice</span> <span class="o">-</span><span class="mi">5</span> <span class="n">pid</span>                                       <span class="c1"># higher priority (neg number)</span>
+<span class="n">nice</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="mi">5</span> <span class="n">top</span>
+<span class="n">nice</span> <span class="o">-</span><span class="n">n</span> <span class="mi">5</span> <span class="n">top</span>                                       <span class="c1"># lower priority</span>
+<span class="o">^</span><span class="n">Z</span>                                                  <span class="c1"># put in background</span>
+<span class="n">jobs</span> <span class="o">-</span><span class="n">l</span>                                             <span class="c1"># list processes in background</span>
+<span class="n">fg</span> <span class="o">%</span><span class="mi">2</span>                                               <span class="c1"># bring process 2 in foreground</span>
+<span class="n">disown</span> <span class="o">-</span><span class="n">h</span> <span class="o">%</span><span class="mi">1</span>                                        <span class="c1"># detatch process from terminal. wont be killed at logout</span>
+<span class="n">nohup</span> <span class="n">ping</span> <span class="o">-</span><span class="n">i</span> <span class="mi">60</span> <span class="n">goo</span><span class="o">.</span><span class="n">gl</span> <span class="o">&gt;</span> <span class="n">ping</span><span class="o">.</span><span class="n">log</span> <span class="o">&amp;</span>                <span class="c1"># keep running without shell</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">4172</span>
+<span class="n">kill</span> <span class="o">-</span><span class="n">s</span> <span class="n">TERM</span> <span class="mi">4172</span>                                   <span class="c1"># kill -15 4172</span>
+<span class="n">killall</span> <span class="o">-</span><span class="mi">1</span> <span class="n">httpd</span>                                    <span class="c1"># kill HUP</span>
+<span class="n">pkill</span> <span class="o">-</span><span class="mi">9</span> <span class="n">httpd</span>                                      <span class="c1"># kill TERM by (part of) name</span>
+<span class="n">pkill</span> <span class="o">-</span><span class="n">TERM</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span>                                  <span class="c1"># kill TERM owned by www</span>
+
+<span class="n">fuser</span> <span class="o">-</span><span class="n">k</span> <span class="o">-</span><span class="n">TERM</span> <span class="o">-</span><span class="n">m</span> <span class="o">/</span><span class="n">home</span>                             <span class="c1"># kill all proc accessing /home</span>
+                                                    <span class="mi">1</span> <span class="n">HUP</span> <span class="p">(</span><span class="n">hang</span> <span class="n">up</span><span class="p">)</span>
+                                                    <span class="mi">2</span> <span class="n">INT</span> <span class="p">(</span><span class="n">interrupt</span><span class="p">)</span>
+                                                    <span class="mi">3</span> <span class="n">QUIT</span> <span class="p">(</span><span class="n">quit</span><span class="p">)</span>
+                                                    <span class="mi">9</span> <span class="n">KILL</span> <span class="p">(</span><span class="n">non</span><span class="o">-</span><span class="n">catchable</span><span class="p">,</span> <span class="n">non</span><span class="o">-</span><span class="n">ignorable</span><span class="p">)</span>
+                                                    <span class="mi">15</span> <span class="n">TERM</span> <span class="p">(</span><span class="n">software</span> <span class="n">termination</span> <span class="n">sig</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-52'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-52'>#</a>
+      </div>
+      <p>system performance</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">vmstat</span>                                              <span class="c1"># disk, blocks/s processes running</span>
+<span class="n">iostat</span> <span class="o">-</span><span class="n">xd</span>                                          <span class="c1"># disk, await: ave wait time.</span>
+                                                    <span class="n">svctm</span><span class="p">:</span> <span class="n">service</span> <span class="n">time</span>
+                                                    <span class="n">rrqm</span><span class="o">/</span><span class="n">s</span> <span class="n">wrqm</span><span class="o">/</span><span class="n">s</span><span class="p">:</span> <span class="n">r</span><span class="o">/</span><span class="n">w</span> <span class="n">req</span>
+                                                    <span class="n">avgrq</span><span class="o">-</span><span class="n">sz</span><span class="p">:</span> <span class="n">average</span> <span class="n">size</span> <span class="n">of</span> <span class="n">req</span>
+                                                    <span class="n">avgqu</span><span class="o">-</span><span class="n">ze</span><span class="p">:</span> <span class="n">average</span> <span class="n">queue</span> <span class="n">length</span>
+<span class="n">vmstat</span> <span class="mi">1</span> <span class="mi">50</span>                                         <span class="c1"># virtual mem. interval. r: waiting for cpu</span>
+                                                    <span class="n">so</span><span class="o">/</span><span class="n">si</span> <span class="n">swap</span> <span class="p">(</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span> <span class="n">OOM</span><span class="p">)</span>
+<span class="n">uptime</span>                                              <span class="c1"># no. of tasks waiting to run on CPU $ blocked in I/O</span>
+<span class="n">vmstat</span> <span class="mi">1</span> <span class="mi">10</span> <span class="o">-</span><span class="n">Sk</span> <span class="o">-</span><span class="n">t</span>                                  <span class="c1"># sys 10 sample, 1s interval</span>
+                                                    <span class="o">-</span><span class="n">t</span> <span class="n">timestamp</span> <span class="o">-</span><span class="n">Sk</span> <span class="n">kb</span>
+<span class="n">mpstat</span> <span class="o">-</span><span class="n">P</span> <span class="n">ALL</span> <span class="mi">1</span> <span class="mi">3</span>                                   <span class="c1"># cpu info</span>
+<span class="n">dstat</span> <span class="mi">1</span> <span class="mi">10</span> <span class="o">--</span><span class="n">top</span><span class="o">-</span><span class="n">cpu</span>                                <span class="c1"># or --top-mem</span>
+<span class="n">sar</span> <span class="o">-</span><span class="n">u</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">sa</span><span class="o">/</span><span class="n">sa</span><span class="o">&lt;</span><span class="n">XX</span><span class="o">&gt;</span>
+<span class="n">free</span> <span class="o">-</span><span class="n">m</span>                                             <span class="c1"># free + bug + cached =&gt; available</span>
+                                                    <span class="n">buffers</span><span class="p">:</span> <span class="nb">buffer</span> <span class="n">cache</span><span class="o">-&gt;</span><span class="n">I</span><span class="o">/</span><span class="n">O</span> <span class="n">cached</span><span class="o">-&gt;</span><span class="n">fs</span>
+<span class="n">dstat</span> <span class="o">-</span><span class="n">mst</span> <span class="mi">2</span> <span class="mi">5</span>
+
+<span class="n">cat</span> <span class="o">/</span><span class="n">proc</span><span class="o">/</span><span class="n">meminfo</span> <span class="o">|</span><span class="n">egrep</span> <span class="o">-</span><span class="n">w</span> <span class="s2">&quot;Buffers|Cached|MemFree&quot;</span>
+<span class="n">sar</span> <span class="o">-</span><span class="n">B</span> <span class="o">-</span><span class="n">s</span> <span class="mo">05</span><span class="p">:</span><span class="mo">00</span><span class="p">:</span><span class="mo">00</span> <span class="o">-</span><span class="n">e</span> <span class="mo">05</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mo">00</span>                      <span class="c1"># page faults</span>
+<span class="n">sar</span> <span class="o">-</span><span class="n">n</span> <span class="n">DEV</span> <span class="mi">1</span>                                        <span class="c1"># network interface throughut</span>
+<span class="n">sar</span> <span class="o">-</span><span class="n">n</span> <span class="n">TCP</span> <span class="mi">1</span>                                        <span class="c1"># active-&gt;locally initiated (via connect()), passive-&gt;remote (via accept())</span>
+<span class="n">dstat</span> <span class="o">--</span><span class="n">vm</span>                                          <span class="c1"># virtual memory</span>
+<span class="n">ps</span> <span class="o">-</span><span class="n">eo</span> <span class="n">pcpu</span><span class="p">,</span><span class="n">pmem</span><span class="p">,</span><span class="n">pid</span><span class="p">,</span><span class="n">ppid</span><span class="p">,</span><span class="n">user</span><span class="p">,</span><span class="n">stat</span><span class="p">,</span><span class="n">args</span> \
+    <span class="o">|</span> <span class="n">sort</span> <span class="o">-</span><span class="n">k2</span> <span class="o">-</span><span class="n">r</span> <span class="o">|</span> <span class="n">head</span>                            <span class="c1"># sort by MEM</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-53'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-53'>#</a>
+      </div>
+      <p>file permission</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">chmod</span> <span class="mi">640</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">maillog</span>
+<span class="n">chmod</span> <span class="n">u</span><span class="o">=</span><span class="n">rw</span><span class="p">,</span><span class="n">g</span><span class="o">=</span><span class="n">r</span><span class="p">,</span><span class="n">o</span><span class="o">=</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">maillog</span>
+<span class="n">find</span> <span class="o">.</span> <span class="o">-</span><span class="n">perm</span> <span class="o">-</span><span class="n">u</span><span class="o">+</span><span class="n">s</span> <span class="o">-</span><span class="k">print</span>                            <span class="c1"># find file with SUID bit</span>
+<span class="n">find</span> <span class="o">/</span> <span class="o">-</span><span class="n">perm</span> <span class="o">+</span><span class="mi">4000</span>                                  <span class="c1"># or +2000 for SGID</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-54'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-54'>#</a>
+      </div>
+      <p>sticky bit </p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">SUID</span><span class="o">/</span><span class="n">SGID</span> <span class="n">the</span> <span class="n">bit</span> <span class="n">can</span> <span class="n">be</span> <span class="nb">set</span> <span class="n">on</span> <span class="n">executable</span> <span class="n">files</span><span class="o">.</span>
+<span class="n">using</span> <span class="n">setuid</span><span class="p">,</span> <span class="n">sgid</span> <span class="ow">or</span> <span class="n">chmod</span> <span class="mi">4700</span> <span class="nb">file</span><span class="p">,</span> 
+<span class="ow">or</span> <span class="n">chmod</span> <span class="mi">2700</span> <span class="ow">or</span> <span class="n">chmod</span> <span class="n">g</span><span class="o">+</span><span class="n">s</span><span class="p">,</span> <span class="n">chmod</span> <span class="n">u</span><span class="o">+</span><span class="n">s</span><span class="o">.</span> 
+<span class="n">Allow</span> <span class="n">the</span> <span class="nb">file</span> <span class="n">being</span> <span class="n">executed</span> <span class="n">to</span> <span class="n">be</span> <span class="n">executed</span> <span class="k">with</span> <span class="n">the</span> <span class="n">privileges</span> <span class="n">of</span> <span class="n">the</span> <span class="n">owner</span> <span class="ow">or</span> <span class="n">the</span> <span class="n">group</span><span class="o">.</span> 
+
+<span class="o">*</span> <span class="n">OOM</span> <span class="n">killer</span><span class="p">:</span> <span class="n">Out</span> <span class="n">of</span> <span class="n">memory</span>
+
+<span class="o">/</span><span class="n">proc</span><span class="o">/</span><span class="n">cpuinfo</span>
+<span class="o">/</span><span class="n">proc</span><span class="o">/</span><span class="n">scsi</span><span class="o">/</span><span class="n">scsi</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-55'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-55'>#</a>
+      </div>
+      <p>file system</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">cat</span> <span class="o">/</span><span class="n">proc</span><span class="o">/</span><span class="n">partitions</span>
+<span class="n">du</span> <span class="o">-</span><span class="n">sh</span> <span class="o">*</span>
+<span class="n">du</span> <span class="o">-</span><span class="n">csh</span>                                             <span class="c1"># total size of current directory</span>
+<span class="n">du</span> <span class="o">-</span><span class="n">ks</span> <span class="o">*</span> <span class="o">|</span> <span class="n">sort</span> <span class="o">-</span><span class="n">nr</span>                                 <span class="c1"># sort by size in kb</span>
+<span class="n">ls</span> <span class="o">-</span><span class="n">lSr</span>                                             <span class="c1"># files by size biggest last</span>
+<span class="n">ls</span> <span class="o">-</span><span class="n">li</span>                                              <span class="c1"># with inode number</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">var</span> <span class="o">-</span><span class="n">inum</span> <span class="n">xxxx</span>                                <span class="c1"># find file with inum</span>
+<span class="n">fuser</span> <span class="o">-</span><span class="n">m</span> <span class="o">/</span><span class="n">var</span>                                       <span class="c1"># list of processes accessing /var</span>
+<span class="n">lsof</span> <span class="o">/</span><span class="n">var</span>             
+<span class="n">lsof</span> <span class="o">-</span><span class="n">p</span> <span class="n">pid</span>                                         <span class="c1"># list of files accessed by proc</span>
+<span class="n">lsof</span> <span class="o">-</span><span class="n">a</span> <span class="o">-</span><span class="n">i</span> <span class="o">-</span><span class="n">s</span> <span class="n">TCP</span><span class="p">:</span><span class="n">SYN_RECV</span> <span class="o">-</span><span class="n">p</span> <span class="o">&lt;</span><span class="n">process</span><span class="o">-</span><span class="nb">id</span><span class="o">&gt;</span>
+
+<span class="n">mount</span> <span class="o">/</span><span class="n">cdrom</span>                                        <span class="c1"># mount if listed in /etc/fstab</span>
+<span class="n">mount</span> <span class="o">-</span><span class="n">v</span> <span class="o">-</span><span class="n">t</span> <span class="n">cd9660</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">cd0c</span> <span class="o">/</span><span class="n">mnt</span>                   <span class="c1"># find dev and mnt</span>
+<span class="n">mount</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdc0</span> <span class="o">-</span><span class="n">t</span> <span class="n">ntfs</span><span class="o">-</span><span class="mi">3</span><span class="n">g</span> <span class="o">/</span><span class="n">win</span>                     <span class="c1"># mount scsi</span>
+<span class="n">mount</span> <span class="o">-</span><span class="n">o</span> <span class="n">remount</span><span class="p">,</span><span class="n">ro</span> <span class="o">/</span>                               <span class="c1"># remount for fsck</span>
+<span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">cd0c</span> <span class="n">of</span><span class="o">=</span><span class="nb">file</span><span class="o">.</span><span class="n">iso</span> <span class="n">bs</span><span class="o">=</span><span class="mi">2048</span>                 <span class="c1"># copy raw data</span>
+<span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">zero</span> <span class="n">of</span><span class="o">=/</span><span class="n">swap2g</span> <span class="n">bs</span><span class="o">=</span><span class="mi">1024</span><span class="n">k</span> <span class="n">count</span><span class="o">=</span><span class="mi">2000</span>      <span class="c1"># swap</span>
+<span class="n">mkswap</span> <span class="o">/</span><span class="n">swap2g</span>                                      <span class="c1"># create swap</span>
+<span class="n">swapon</span> <span class="o">/</span><span class="n">swap2g</span>                                      <span class="c1"># activate swap</span>
+<span class="n">swapoff</span> <span class="o">/</span><span class="n">swap2g</span>                                     <span class="c1"># deactivate swap</span>
+<span class="n">rm</span> <span class="o">/</span><span class="n">swap2g</span>
+
+<span class="n">mount</span> <span class="n">smb</span> <span class="n">share</span> <span class="kn">from</span> \\<span class="n">smbserver</span>\<span class="n">myshare</span>\
+<span class="n">smbclient</span> <span class="o">-</span><span class="n">U</span> <span class="n">user</span> <span class="o">-</span><span class="n">I</span> <span class="mf">102.168</span><span class="o">.</span><span class="mf">16.1</span> <span class="o">-</span><span class="n">L</span> <span class="o">//</span><span class="n">smbshare</span><span class="o">/</span>    <span class="c1"># list</span>
+<span class="n">mount</span> <span class="o">-</span><span class="n">t</span> <span class="n">smbfs</span> <span class="o">-</span><span class="n">o</span> <span class="n">username</span><span class="o">=</span><span class="n">winuser</span> <span class="o">//</span><span class="n">smbserver</span><span class="o">/</span><span class="n">myshare</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">smbshare</span>
+
+<span class="n">mount</span> <span class="o">-</span><span class="n">t</span> <span class="n">iso9660</span> <span class="o">-</span><span class="n">o</span> <span class="n">loop</span> <span class="nb">file</span><span class="o">.</span><span class="n">iso</span> <span class="o">/</span><span class="n">mnt</span>              <span class="c1"># mount cd image</span>
+<span class="n">mount</span> <span class="o">-</span><span class="n">t</span> <span class="n">ext3</span> <span class="o">-</span><span class="n">o</span> <span class="n">loop</span> <span class="nb">file</span><span class="o">.</span><span class="n">img</span> <span class="o">/</span><span class="n">mnt</span>                 <span class="c1"># mount ext3 fs image</span>
+
+<span class="n">mount</span> <span class="o">-</span><span class="n">t</span> <span class="n">tmpfs</span> <span class="o">-</span><span class="n">osize</span><span class="o">=</span><span class="mi">64</span><span class="n">m</span> <span class="n">tmpfs</span> <span class="o">/</span><span class="n">memdisk</span>            <span class="c1"># RAMdisk</span>
+<span class="n">time</span> <span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">zero</span> <span class="n">bs</span><span class="o">=</span><span class="mi">1024</span><span class="n">k</span> <span class="n">count</span><span class="o">=</span><span class="mi">60</span> <span class="n">of</span><span class="o">=/</span><span class="n">memdisk</span><span class="o">/</span><span class="mi">60</span><span class="n">M</span><span class="o">.</span><span class="n">file</span>     <span class="c1"># test write time</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-56'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-56'>#</a>
+      </div>
+      <p>network</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">ethtool</span> <span class="n">eth0</span>                                        <span class="c1"># show ethernet status</span>
+<span class="n">ethtool</span> <span class="o">-</span><span class="n">s</span> <span class="n">eth0</span> <span class="n">speed</span> <span class="mi">100</span> <span class="n">duplex</span> <span class="n">full</span>               <span class="c1"># force 100Mb full dup</span>
+<span class="n">ethtool</span> <span class="o">-</span><span class="n">p</span> <span class="n">eth1</span>                                     <span class="c1"># blink ethernet led</span>
+<span class="n">ip</span> <span class="n">link</span> <span class="n">show</span>                                        <span class="c1"># interfaces</span>
+<span class="n">ip</span> <span class="n">addr</span> <span class="n">show</span>
+<span class="n">ip</span> <span class="n">neigh</span> <span class="n">show</span>                                       <span class="c1"># arp -a</span>
+<span class="n">ip</span> <span class="n">route</span>                                            <span class="c1"># route -n, netstat -rn # routing table</span>
+<span class="n">ip</span> <span class="n">route</span> <span class="n">add</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">20.0</span><span class="o">/</span><span class="mi">24</span> <span class="n">via</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">16.254</span>     <span class="c1"># 254 gw</span>
+<span class="n">ip</span> <span class="n">route</span> <span class="n">add</span> <span class="n">default</span> <span class="n">via</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">51.254</span> <span class="n">dev</span> <span class="n">eth0</span>  
+<span class="n">ip</span> <span class="n">addr</span> <span class="n">add</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">50.254</span><span class="o">/</span><span class="mi">24</span> <span class="n">dev</span> <span class="n">eth0</span>              <span class="c1"># first ip</span>
+<span class="n">ip</span> <span class="n">link</span> <span class="nb">set</span> <span class="n">dev</span> <span class="n">eth0</span> <span class="n">up</span>
+<span class="n">ip</span> <span class="n">addr</span> <span class="n">add</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">51.254</span><span class="o">/</span><span class="mi">24</span> <span class="n">dev</span> <span class="n">eth0</span><span class="p">:</span><span class="mi">1</span>            <span class="c1"># 2nd ip</span>
+<span class="n">ip</span> <span class="n">link</span> <span class="n">ls</span> <span class="n">dev</span> <span class="n">eth0</span>
+<span class="n">ip</span> <span class="n">addr</span> <span class="k">del</span> <span class="mf">1.2</span><span class="o">.</span><span class="mf">3.4</span><span class="o">/</span><span class="mi">32</span> <span class="n">dev</span> <span class="n">eth0</span>
+<span class="n">ip</span> <span class="n">addr</span> <span class="n">flush</span> <span class="n">dev</span> <span class="n">eth0</span>
+
+<span class="n">netstat</span> <span class="o">-</span><span class="n">an</span> <span class="o">|</span><span class="n">grep</span> <span class="n">LISTEN</span>                            <span class="c1"># port in use</span>
+<span class="n">lsof</span> <span class="o">-</span><span class="n">i</span>                                             <span class="c1"># all internet conn</span>
+<span class="n">netstat</span> <span class="o">-</span><span class="n">anp</span> <span class="o">--</span><span class="n">udp</span> <span class="o">--</span><span class="n">tcp</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">LISTEN</span>
+<span class="n">netstat</span> <span class="o">-</span><span class="n">tup</span>                                        <span class="c1"># active conn</span>
+<span class="n">netstat</span> <span class="o">-</span><span class="n">tupl</span>                                       <span class="c1"># listening ports</span>
+
+<span class="n">sudo</span> <span class="n">iptables</span> <span class="o">-</span><span class="n">L</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">v</span>                              <span class="c1"># firewall status</span>
+<span class="n">sudo</span> <span class="n">iptables</span> <span class="o">-</span><span class="n">P</span> <span class="n">INPUT</span> <span class="n">ACCEPT</span>                       <span class="c1"># open everything</span>
+<span class="n">sudo</span> <span class="n">iptables</span> <span class="o">-</span><span class="n">P</span> <span class="n">FORWARD</span> <span class="n">ACCEPT</span>
+<span class="n">sudo</span> <span class="n">iptables</span> <span class="o">-</span><span class="n">P</span> <span class="n">OUTPUT</span> <span class="n">ACCEPT</span>
+<span class="n">sudo</span> <span class="n">iptables</span> <span class="o">-</span><span class="n">F</span>                                    <span class="c1"># flush all chains</span>
+<span class="n">sudo</span> <span class="n">iptables</span> <span class="o">-</span><span class="n">X</span>                                    <span class="c1"># delete all chains</span>
+
+<span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">nscd</span> <span class="n">restart</span>                            <span class="c1"># flush dns cache</span>
+<span class="n">dig</span> <span class="n">MX</span> <span class="n">google</span><span class="o">.</span><span class="n">com</span>
+<span class="n">dig</span> <span class="nd">@8.8.8.8</span> <span class="n">NS</span> <span class="n">g</span><span class="o">.</span><span class="n">com</span>                               <span class="c1"># query external server</span>
+<span class="n">dig</span> <span class="n">AXFR</span> <span class="nd">@4.4.4.4</span> <span class="n">g</span><span class="o">.</span><span class="n">com</span>                             <span class="c1"># get full zone</span>
+
+<span class="n">host</span> <span class="o">-</span><span class="n">t</span> <span class="n">MX</span> <span class="n">google</span><span class="o">.</span><span class="n">com</span>                               <span class="c1"># MX entry</span>
+<span class="n">host</span> <span class="o">-</span><span class="n">t</span> <span class="n">NS</span> <span class="o">-</span><span class="n">T</span> <span class="n">google</span><span class="o">.</span><span class="n">com</span>                            <span class="c1"># get NS record over TCP conn</span>
+<span class="n">host</span> <span class="o">-</span><span class="n">a</span> <span class="n">google</span><span class="o">.</span><span class="n">com</span>                                  <span class="c1"># get everything</span>
+
+<span class="n">dig</span> <span class="o">-</span><span class="n">x</span> <span class="mf">78.31</span><span class="o">.</span><span class="mf">70.238</span>                                 <span class="c1"># reverse query</span>
+<span class="n">host</span> <span class="mf">78.31</span><span class="o">.</span><span class="mf">70.238</span>
+<span class="n">nslookup</span> <span class="mf">78.31</span><span class="o">.</span><span class="mf">70.238</span>
+
+<span class="n">tcpdump</span> <span class="n">port</span> <span class="mi">80</span>
+<span class="n">tcpdump</span> <span class="n">host</span> <span class="n">google</span><span class="o">.</span><span class="n">com</span>
+<span class="n">tcpdump</span> <span class="o">-</span><span class="n">l</span> <span class="o">&gt;</span> <span class="n">dump</span> <span class="o">&amp;&amp;</span> <span class="n">tail</span> <span class="o">-</span><span class="n">f</span> <span class="n">dump</span>
+<span class="n">tcpdump</span> <span class="o">-</span><span class="n">i</span> <span class="n">eth0</span> <span class="o">-</span><span class="n">s</span> <span class="mi">0</span> <span class="o">-</span><span class="n">A</span> <span class="n">port</span> <span class="mi">80</span> <span class="o">|</span><span class="n">grep</span> <span class="n">GET</span>           <span class="c1"># -A ASCII -s 0 full packet</span>
+<span class="n">nmap</span> <span class="n">google</span><span class="o">.</span><span class="n">com</span>                                     <span class="c1"># scans all reserved TCP ports</span>
+<span class="n">nmap</span> <span class="o">-</span><span class="n">sS</span> <span class="o">-</span><span class="n">sV</span> <span class="o">-</span><span class="n">O</span> <span class="n">google</span><span class="o">.</span><span class="n">com</span>                          <span class="c1"># with version and OS detection</span>
+
+<span class="n">nc</span>  <span class="c1"># netcat, copy large folder over raw tcp conn, quick without protocol overhead. </span>
+<span class="n">server</span><span class="c1"># tar -cf - -C NCFILE . | nc -l -p 4444</span>
+<span class="n">client</span><span class="c1"># nc server.ip 4444 | tar xpf - -C NCFILE</span>
+<span class="n">server</span><span class="c1"># cat LARGEFILE | nc -l 5678</span>
+<span class="n">client</span><span class="c1"># nc server.ip 5674 &gt; LARGEFILE</span>
+
+<span class="n">nc</span> <span class="o">-</span><span class="n">lp</span> <span class="mi">4444</span> <span class="o">-</span><span class="n">e</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>                            <span class="c1"># backdoor</span>
+<span class="n">server</span> <span class="c1"># nc -lp 4444</span>
+<span class="n">client</span> <span class="c1"># nc server.ip 4444                          # chat over TCP socket</span>
+
+<span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span> <span class="o">-</span><span class="n">t</span> <span class="n">rsa</span> <span class="o">-</span><span class="n">N</span> <span class="s1">&#39;&#39;</span>
+<span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span> <span class="o">-</span><span class="n">l</span> <span class="o">-</span><span class="n">f</span> <span class="n">key</span><span class="o">.</span><span class="n">pub</span>                            <span class="c1"># check key fingerprint</span>
+
+<span class="n">rsync</span> <span class="o">-</span><span class="n">avzrR</span> <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="n">tmp</span><span class="o">/</span> <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;ssh -p 2002&#39;</span> \      <span class="c1"># -a archive -r recursive -R relative -H hardlinke</span>
+    <span class="n">local_path</span> <span class="n">user</span><span class="nd">@server</span><span class="p">:</span><span class="n">remote_path</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-57'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-57'>#</a>
+      </div>
+      <p>encryption</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">openssl</span> <span class="n">aes</span><span class="o">-</span><span class="mi">128</span><span class="o">-</span><span class="n">cbc</span> <span class="o">-</span><span class="n">salt</span> <span class="o">-</span><span class="ow">in</span> <span class="nb">file</span> <span class="o">-</span><span class="n">out</span> <span class="nb">file</span><span class="o">.</span><span class="n">aes</span>    <span class="c1"># encrypt</span>
+<span class="n">openssl</span> <span class="n">aes</span><span class="o">-</span><span class="mi">128</span><span class="o">-</span><span class="n">cbc</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">salt</span> <span class="o">-</span><span class="ow">in</span> <span class="nb">file</span><span class="o">.</span><span class="n">aes</span> <span class="o">-</span><span class="n">out</span> <span class="nb">file</span> <span class="c1"># decrypt</span>
+<span class="n">tar</span> <span class="o">-</span><span class="n">cf</span> <span class="o">-</span> <span class="n">directory</span> <span class="o">|</span> <span class="n">openssl</span> <span class="n">aes</span><span class="o">-</span><span class="mi">128</span><span class="o">-</span><span class="n">cbc</span> <span class="o">-</span><span class="n">salt</span> <span class="o">-</span><span class="n">out</span> <span class="n">tarfile</span><span class="o">.</span><span class="n">aes</span>
+<span class="n">openssl</span> <span class="n">aes</span><span class="o">-</span><span class="mi">128</span><span class="o">-</span><span class="n">cbc</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">salt</span> <span class="o">-</span><span class="ow">in</span> <span class="n">tarfile</span><span class="o">.</span><span class="n">aes</span> <span class="o">|</span> <span class="n">tar</span> <span class="o">-</span><span class="n">x</span> <span class="o">-</span><span class="n">f</span> <span class="o">-</span>
+<span class="n">gpg</span> <span class="o">-</span><span class="n">c</span> <span class="nb">file</span>
+<span class="n">gpg</span> <span class="nb">file</span><span class="o">.</span><span class="n">gpg</span> <span class="o">-</span><span class="n">o</span> <span class="n">ooutfile</span>
+<span class="n">gpg</span> <span class="o">--</span><span class="n">gen</span><span class="o">-</span><span class="n">key</span>                                       <span class="c1"># -e enc -d dec -o outfile</span>
+<span class="n">gpg</span> <span class="o">-</span><span class="n">a</span> <span class="o">-</span><span class="n">o</span> <span class="n">alicekey</span><span class="o">.</span><span class="n">asc</span> <span class="o">--</span><span class="n">export</span> <span class="s1">&#39;alice&#39;</span>             <span class="c1"># export pub key</span>
+<span class="n">gpg</span> <span class="o">-</span><span class="n">e</span> <span class="o">-</span><span class="n">r</span> <span class="s1">&#39;alice&#39;</span> <span class="nb">file</span>                              <span class="c1"># enc file for alice</span>
+<span class="n">gpg</span> <span class="o">--</span><span class="nb">list</span><span class="o">-</span><span class="n">keys</span>
+
+<span class="n">openssl</span> <span class="n">req</span> <span class="o">-</span><span class="n">new</span> <span class="o">-</span><span class="n">x509</span> <span class="o">-</span><span class="n">days</span> <span class="mi">730</span> <span class="o">-</span><span class="n">config</span> \          <span class="c1"># create CA auth</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssl</span><span class="o">/</span><span class="n">openssl</span><span class="o">.</span><span class="n">cnf</span> <span class="o">-</span><span class="n">keyout</span> <span class="n">CA</span><span class="o">/</span><span class="n">private</span><span class="o">/</span><span class="n">cakey</span><span class="o">.</span><span class="n">pem</span> \
+    <span class="o">-</span><span class="n">out</span> <span class="n">CA</span><span class="o">/</span><span class="n">cacert</span><span class="o">.</span><span class="n">pem</span> 
+<span class="n">openssl</span> <span class="n">req</span> <span class="o">-</span><span class="n">new</span> <span class="o">-</span><span class="n">keyout</span> <span class="n">newkey</span><span class="o">.</span><span class="n">pem</span> <span class="o">-</span><span class="n">out</span> <span class="n">newreq</span><span class="o">.</span><span class="n">pem</span> \
+    <span class="o">-</span><span class="n">config</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssl</span><span class="o">/</span><span class="n">openssl</span><span class="o">.</span><span class="n">cnf</span>                    <span class="c1"># create a request certificate</span>
+<span class="n">cat</span> <span class="n">newreq</span><span class="o">.</span><span class="n">pem</span> <span class="n">newkey</span><span class="o">.</span><span class="n">pem</span> <span class="o">&gt;</span> <span class="n">new</span><span class="o">.</span><span class="n">pem</span>
+<span class="n">openssl</span> <span class="n">ca</span> <span class="o">-</span><span class="n">policy</span> <span class="n">policy_anything</span> \
+    <span class="o">-</span><span class="n">out</span> <span class="n">servernamecert</span><span class="o">.</span><span class="n">pem</span> \
+    <span class="o">-</span><span class="n">config</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssl</span><span class="o">/</span><span class="n">openssl</span><span class="o">/</span><span class="n">cnf</span> \
+    <span class="o">-</span><span class="n">infile</span> <span class="n">new</span><span class="o">.</span><span class="n">pem</span>
+<span class="n">mv</span> <span class="n">newkey</span><span class="o">.</span><span class="n">pem</span> <span class="n">servernamekey</span><span class="o">.</span><span class="n">pem</span>                     <span class="c1"># sign the cert </span>
+
+<span class="n">openssl</span> <span class="n">x509</span> <span class="o">-</span><span class="n">text</span> <span class="o">-</span><span class="ow">in</span> <span class="n">servernamecert</span><span class="o">.</span><span class="n">pem</span>           <span class="c1"># view info</span>
+<span class="n">openssl</span> <span class="n">req</span> <span class="o">-</span><span class="n">noout</span> <span class="o">-</span><span class="n">text</span> <span class="o">-</span><span class="ow">in</span> <span class="n">server</span><span class="o">.</span><span class="n">csr</span>             <span class="c1"># view req info</span>
+<span class="n">openssl</span> <span class="n">s_client</span> <span class="o">-</span><span class="n">connect</span> <span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="mi">443</span>            <span class="c1"># check web cert</span>
+
+<span class="n">openssl</span> <span class="n">md5</span> <span class="n">filename</span>                                <span class="c1"># generate an md5 checksum for file</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-58'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-58'>#</a>
+      </div>
+      <p>systems and utilities</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">chkconfig</span> <span class="o">--</span><span class="nb">list</span> 
+<span class="n">chkconfig</span> <span class="o">--</span><span class="nb">list</span> <span class="n">sshd</span>
+<span class="n">chkconfig</span> <span class="n">sshd</span> <span class="o">--</span><span class="n">level</span> <span class="mi">35</span> <span class="n">on</span>                        <span class="c1"># config sshd for levels 3,5</span>
+<span class="n">chkconfig</span> <span class="n">sshd</span> <span class="n">off</span>                                  <span class="c1"># disable sshd for all runlevel</span>
+
+<span class="n">init</span> <span class="mi">5</span>                                              <span class="c1"># enters runlevel 5</span>
+<span class="n">grep</span> <span class="n">default</span><span class="p">:</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">inittab</span>                          
+    <span class="mi">0</span> <span class="n">shutdown</span> <span class="ow">and</span> <span class="n">halt</span>
+    <span class="mi">1</span> <span class="n">single</span><span class="o">-</span><span class="n">user</span> <span class="n">mode</span> <span class="p">(</span><span class="n">also</span> <span class="n">S</span><span class="p">)</span>
+    <span class="mi">2</span> <span class="n">multi</span><span class="o">-</span><span class="n">user</span> <span class="n">w</span><span class="o">/</span><span class="n">o</span> <span class="n">network</span>
+    <span class="mi">3</span> <span class="n">multi</span><span class="o">-</span><span class="n">user</span> <span class="n">w</span> <span class="n">network</span>
+    <span class="mi">5</span> <span class="n">multi</span><span class="o">-</span><span class="n">user</span> <span class="n">w</span> <span class="n">X</span>
+    <span class="mi">6</span> <span class="n">Reboot</span>
+
+<span class="n">sysctl</span> <span class="o">-</span><span class="n">a</span>
+<span class="n">sysctl</span> <span class="n">kern</span><span class="o">.</span><span class="n">maxfiles</span> <span class="o">=</span> <span class="mi">65536</span>                        <span class="c1"># max no. of file descriptors</span>
+<span class="n">sysctl</span> <span class="n">fs</span><span class="o">.</span><span class="n">file</span><span class="o">-</span><span class="nb">max</span> <span class="o">=</span> <span class="mi">102400</span>                         <span class="c1"># max open file limit</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-59'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-59'>#</a>
+      </div>
+      <p>/etc/sysctl.conf perm change</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">cat</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">security</span><span class="o">/</span><span class="n">limits</span><span class="o">.</span><span class="n">conf</span>
+<span class="o">*</span> <span class="n">hard</span> <span class="n">nproc</span> <span class="mi">250</span>                                    <span class="c1"># uer processes</span>
+<span class="o">*</span> <span class="n">hard</span> <span class="n">nofile</span> <span class="mi">409600</span>                                <span class="c1"># application open files</span>
+<span class="n">ulimit</span> <span class="o">-</span><span class="n">n</span> <span class="mi">10240</span>                                     <span class="c1"># temporary change in shell</span>
+
+<span class="n">sysctl</span> <span class="n">hw</span>                                           <span class="c1"># hardward info</span>
+<span class="o">/</span><span class="n">proc</span><span class="o">/</span><span class="n">cpuinfo</span>   
+<span class="o">/</span><span class="n">proc</span><span class="o">/</span><span class="n">meminfo</span>                                       <span class="c1"># physical memory MemTotal</span>
+<span class="n">free</span> <span class="o">-</span><span class="n">m</span>                                             <span class="c1"># used and free mem in MB</span>
+<span class="n">dmidecode</span>                                           <span class="c1"># hw info from DMI/SMBIOS</span>
+<span class="n">dmesg</span>                                               <span class="c1"># detected hw and boot msg</span>
+<span class="n">lsdev</span>                                               <span class="c1"># installed hw</span>
+<span class="n">hostname</span> <span class="o">-</span><span class="n">i</span>                                         <span class="c1"># ip address</span>
+<span class="n">last</span> <span class="n">reboot</span>                                         <span class="c1"># reboot history</span>
+<span class="n">uname</span> <span class="o">-</span><span class="n">a</span>                                            <span class="c1"># kernal version</span>
+<span class="n">lsb_release</span> <span class="o">-</span><span class="n">a</span>                                      <span class="c1"># full release info</span>
+<span class="n">lsmod</span>                                               <span class="c1"># all modules loaded in kernel</span>
+
+<span class="n">netstat</span> <span class="o">-</span><span class="n">m</span>                                          <span class="c1"># network memory buffers</span>
+<span class="n">echo</span> <span class="s2">&quot; mail body &quot;</span> <span class="o">|</span> <span class="n">mail</span> <span class="n">user</span><span class="nd">@server.ip</span>
+<span class="n">tar</span> <span class="o">-</span><span class="n">cf</span> <span class="n">home</span><span class="o">.</span><span class="n">tar</span> <span class="n">home</span><span class="o">/</span>                              <span class="c1"># -c create</span>
+<span class="n">tar</span> <span class="o">-</span><span class="n">czf</span> <span class="n">home</span><span class="o">.</span><span class="n">tgz</span> <span class="n">home</span><span class="o">/</span>                             <span class="c1"># tar with zip compression</span>
+<span class="n">tar</span> <span class="o">-</span><span class="n">C</span> <span class="o">/</span><span class="n">user</span> <span class="o">-</span><span class="n">czf</span> <span class="n">local</span><span class="o">.</span><span class="n">tgz</span> <span class="n">local</span><span class="o">/</span><span class="n">etc</span> <span class="n">local</span><span class="o">/</span><span class="n">www</span> 
+<span class="n">tar</span> <span class="o">-</span><span class="n">C</span> <span class="o">/</span><span class="n">user</span> <span class="o">-</span><span class="n">xzf</span> <span class="n">local</span><span class="o">.</span><span class="n">tgz</span>                         <span class="c1"># -C targe root path</span>
+
+<span class="n">tar</span> <span class="o">-</span><span class="n">tzf</span> <span class="n">home</span><span class="o">.</span><span class="n">tgz</span>                                   <span class="c1"># list w/o extracting</span>
+<span class="n">tar</span> <span class="o">-</span><span class="n">czf</span> <span class="n">home</span><span class="o">.</span><span class="n">tgz</span> <span class="o">--</span><span class="n">exclude</span> <span class="s1">&#39;*.o&#39;</span> <span class="o">--</span><span class="n">exclude</span> <span class="s1">&#39;tmp/&#39;</span> <span class="n">home</span><span class="o">/</span>
+
+<span class="nb">zip</span> <span class="o">-</span><span class="n">r</span> <span class="n">fileName</span><span class="o">.</span><span class="n">zip</span> <span class="o">/</span><span class="n">path</span>
+<span class="n">unzip</span> <span class="n">fileName</span><span class="o">.</span><span class="n">zip</span>
+<span class="n">unzip</span> <span class="o">-</span><span class="n">l</span> <span class="n">fileName</span><span class="o">.</span><span class="n">zip</span>                               <span class="c1"># list w/o extract</span>
+<span class="n">unzip</span> <span class="n">fileName</span><span class="o">.</span><span class="n">zip</span> <span class="n">fileinside</span>                       <span class="c1"># extract only one file</span>
+
+<span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">urandom</span> <span class="n">of</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">hdc</span>                      <span class="c1"># erase a disk</span>
+<span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda</span> <span class="n">of</span><span class="o">=/</span><span class="n">mbr_sda</span><span class="o">.</span><span class="n">bak</span> <span class="n">bs</span><span class="o">=</span><span class="mi">512</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span>       <span class="c1"># backup MBR</span>
+<span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">mbr_sda</span><span class="o">.</span><span class="n">bak</span> <span class="n">of</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda</span> <span class="n">bs</span><span class="o">=</span><span class="mi">512</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span>       <span class="c1"># restore MBR</span>
+<span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">mbr_sda</span><span class="o">.</span><span class="n">bak</span> <span class="n">of</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda</span> <span class="n">bs</span><span class="o">=</span><span class="mi">446</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span>       <span class="c1"># restore boot loader</span>
+<span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">mbr_sda</span><span class="o">.</span><span class="n">bak</span> <span class="n">of</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda</span> <span class="n">bs</span><span class="o">=</span><span class="mi">1</span> <span class="n">count</span><span class="o">=</span><span class="mi">64</span> <span class="n">skip</span><span class="o">=</span><span class="mi">446</span>   <span class="c1"># restore partition table</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-60'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-60'>#</a>
+      </div>
+      <p>utilities: find</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">find</span> <span class="o">.</span> <span class="o">-</span><span class="nb">type</span> <span class="n">f</span> <span class="err">!</span> <span class="o">-</span><span class="n">perm</span> <span class="o">-</span><span class="mi">444</span>                         <span class="c1"># find files not readable by all</span>
+<span class="n">find</span> <span class="o">.</span> <span class="o">-</span><span class="n">cmin</span> <span class="mi">10</span> <span class="o">-</span><span class="k">print</span>                              <span class="c1"># files created or mod in last 10m</span>
+<span class="n">find</span> <span class="o">.</span> <span class="o">-</span><span class="n">name</span> <span class="s1">&#39;*.[ch]&#39;</span> <span class="o">|</span> <span class="n">xargs</span> <span class="n">grep</span> <span class="o">-</span><span class="n">E</span> <span class="s1">&#39;expr&#39;</span>
+<span class="n">find</span> <span class="o">.</span> <span class="o">-</span><span class="n">name</span> <span class="s1">&#39;*.core&#39;</span> <span class="o">|</span> <span class="n">xargs</span> <span class="n">rm</span>
+<span class="n">find</span> <span class="o">.</span> <span class="o">-</span><span class="n">name</span> <span class="s1">&#39;*.core&#39;</span> <span class="o">-</span><span class="k">print</span> <span class="o">-</span><span class="k">exec</span> <span class="n">rm</span> <span class="p">{}</span> \<span class="p">;</span>
+<span class="n">find</span> <span class="o">.</span> \<span class="p">(</span> <span class="o">-</span><span class="n">iname</span> <span class="s1">&#39;*.png&#39;</span> <span class="o">-</span><span class="n">o</span> <span class="o">-</span><span class="n">iname</span> <span class="s1">&#39;*.jpg&#39;</span> \<span class="p">)</span> <span class="o">-</span><span class="k">print</span> <span class="o">-</span><span class="k">exec</span> <span class="n">tar</span> <span class="o">-</span><span class="n">rf</span> <span class="n">images</span><span class="o">.</span><span class="n">tar</span> <span class="p">{}</span> \<span class="p">;</span>
+<span class="n">find</span> <span class="o">.</span> <span class="o">-</span><span class="n">size</span> <span class="o">+</span><span class="mi">10</span><span class="n">M</span> <span class="o">-</span><span class="k">exec</span> <span class="n">ls</span> <span class="o">-</span><span class="n">lh</span> <span class="p">{}</span> \<span class="p">;</span>
+<span class="n">find</span> <span class="o">.</span> <span class="o">-</span><span class="nb">type</span> <span class="n">f</span> <span class="o">-</span><span class="n">print0</span> <span class="o">|</span> <span class="n">xargs</span> <span class="o">-</span><span class="mi">0</span> <span class="n">ls</span> <span class="o">-</span><span class="n">l</span>             <span class="c1"># with spaces in name</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-61'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-61'>#</a>
+      </div>
+      <p>package</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">emacs</span>
+<span class="n">dpkg</span> <span class="o">--</span><span class="n">remove</span> <span class="n">emacs</span>
+<span class="n">dpkg</span> <span class="o">-</span><span class="n">S</span> <span class="nb">file</span>                                        <span class="c1"># find what package a file belongs to</span>
+
+<span class="n">ldd</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">rsync</span>                                  <span class="c1"># list all runtime lib</span>
+<span class="n">ldconfig</span> <span class="o">-</span><span class="n">n</span> <span class="o">/</span><span class="n">libpath</span>                                <span class="c1"># add shared lib path</span>
+<span class="n">echo</span> <span class="err">$</span><span class="n">LD_LIBRARY_PATH</span>                               <span class="c1"># linked lib path</span>
+<span class="n">iconv</span> <span class="o">-</span><span class="n">f</span> <span class="o">&lt;</span><span class="n">from_encoding</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">t</span> <span class="o">&lt;</span><span class="n">to_encoding</span><span class="o">&gt;</span> <span class="n">input_file</span>
+
+<span class="n">tr</span> <span class="s1">&#39;^M&#39;</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">&lt;</span> <span class="n">macfile</span><span class="o">.</span><span class="n">txt</span>                              <span class="c1"># mac file to linux</span>
+<span class="n">ps</span> <span class="n">aux</span> <span class="o">|</span><span class="n">grep</span> <span class="o">-</span><span class="n">w</span> <span class="n">z</span>                                       <span class="c1"># returns the zombies pid</span>
+<span class="n">ps</span> <span class="n">o</span> <span class="n">ppid</span> <span class="p">{</span> <span class="n">returned</span> <span class="n">pid</span> <span class="p">}</span>                              <span class="c1"># returns the parent</span>
+<span class="n">kill</span> <span class="o">-</span><span class="mi">1</span> <span class="p">{</span> <span class="n">the</span> <span class="n">parent</span> <span class="p">}</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-62'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-62'>#</a>
+      </div>
+      <p>databases</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">psql</span> <span class="o">-</span><span class="n">d</span> <span class="n">template1</span> <span class="o">-</span><span class="n">U</span> <span class="n">pgsql</span>
+<span class="o">&gt;</span> <span class="n">alter</span> <span class="n">user</span> <span class="n">username</span> <span class="k">with</span> <span class="n">password</span> <span class="s1">&#39;newpass&#39;</span>
+<span class="o">&gt;</span> <span class="n">createuser</span> <span class="o">-</span><span class="n">U</span> <span class="n">pgsql</span> <span class="o">-</span><span class="n">P</span> <span class="n">uername</span>
+<span class="o">&gt;</span> <span class="n">createdb</span> <span class="o">-</span><span class="n">U</span> <span class="n">pgsql</span> <span class="o">-</span><span class="n">O</span> <span class="n">username</span> <span class="n">dbname</span>
+<span class="o">&gt;</span> <span class="n">dropdb</span> <span class="n">dbname</span>
+<span class="o">&gt;</span> <span class="n">dropuser</span> <span class="n">username</span>
+<span class="n">pg_dump</span> <span class="o">--</span><span class="n">clean</span> <span class="n">dbname</span> <span class="o">&gt;</span> <span class="n">dbname_sql</span><span class="o">.</span><span class="n">dujmp</span>
+<span class="n">psql</span> <span class="n">dbname</span> <span class="o">&lt;</span> <span class="n">dbname_sql</span><span class="o">.</span><span class="n">dump</span>
+<span class="n">pg_dumpall</span> <span class="o">--</span><span class="n">clean</span> <span class="o">&gt;</span> <span class="n">full</span><span class="o">.</span><span class="n">dump</span>
+<span class="n">psql</span> <span class="o">-</span><span class="n">f</span> <span class="n">full</span><span class="o">.</span><span class="n">dump</span> <span class="n">postgres</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-63'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-63'>#</a>
+      </div>
+      <p>change root pass for mysql</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">killall</span> <span class="n">mysqld</span>
+<span class="n">mysqld</span> <span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">grant</span><span class="o">-</span><span class="n">tables</span>
+<span class="n">mysqladmin</span> <span class="o">-</span><span class="n">u</span> <span class="n">root</span> <span class="n">password</span> <span class="s1">&#39;newpass&#39;</span>
+<span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">mysql</span> <span class="n">start</span>
+
+<span class="n">mysql</span> <span class="o">-</span><span class="n">u</span> <span class="n">root</span> <span class="n">mysql</span>
+<span class="n">mysql</span><span class="o">&gt;</span> <span class="n">CREATE</span> <span class="n">USER</span> <span class="s1">&#39;bob&#39;</span><span class="err">@</span><span class="s1">&#39;localhost&#39;</span> <span class="n">IDENTIFIED</span> <span class="n">BY</span> <span class="s1">&#39;pwd&#39;</span><span class="p">;</span>
+<span class="n">mysql</span><span class="o">&gt;</span> <span class="n">CREATE</span> <span class="n">DATABASE</span> <span class="n">dbname</span><span class="p">;</span>
+<span class="n">mysql</span><span class="o">&gt;</span> <span class="n">GRANT</span> <span class="n">ALL</span> <span class="n">ON</span> <span class="o">*.*</span> <span class="n">TO</span> <span class="s1">&#39;bob&#39;</span><span class="err">@</span><span class="s1">&#39;%&#39;</span> <span class="n">IDENTIFIED</span> <span class="n">BY</span> <span class="s1">&#39;pwd&#39;</span><span class="p">;</span>
+<span class="n">mysql</span><span class="o">&gt;</span> <span class="n">FLUSH</span> <span class="n">PRIVILEGES</span><span class="p">;</span>
+
+<span class="n">mysqldump</span> <span class="o">-</span><span class="n">u</span> <span class="n">root</span> <span class="o">-</span><span class="n">psecret</span> <span class="o">--</span><span class="n">add</span><span class="o">-</span><span class="n">drop</span><span class="o">-</span><span class="n">database</span> <span class="n">dbname</span> <span class="o">&gt;</span> <span class="n">dump</span>
+<span class="n">mysql</span> <span class="o">-</span><span class="n">u</span> <span class="n">root</span> <span class="o">-</span><span class="n">psecret</span> <span class="o">-</span><span class="n">D</span> <span class="n">dbname</span> <span class="o">&lt;</span> <span class="n">dump</span>
+
+<span class="n">sqlite</span> <span class="n">dbname</span><span class="o">.</span><span class="n">db</span> <span class="o">.</span><span class="n">dump</span> <span class="o">&gt;</span> <span class="n">dump</span><span class="o">.</span><span class="n">sql</span>
+<span class="n">sqllite</span> <span class="n">dbname</span><span class="o">.</span><span class="n">db</span> <span class="o">&lt;</span> <span class="n">dump</span><span class="o">.</span><span class="n">sql</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-64'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-64'>#</a>
+      </div>
+      <p>bash</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">cmd</span> <span class="mi">1</span> <span class="o">&gt;&gt;</span> <span class="nb">file</span>                                   <span class="c1"># apped stdout to file</span>
+<span class="n">cmd</span> <span class="o">&amp;&gt;</span> <span class="nb">file</span>                                     <span class="c1"># redirect both stdout and stderr </span>
+<span class="n">cmd</span> <span class="o">&gt;</span><span class="nb">file</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span>                                  <span class="c1"># redirect stderr to stdout then to file</span>
+<span class="n">cmd1</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span> <span class="o">|</span> <span class="n">cmd2</span>                                <span class="c1"># pipe stdout and stderr to cmd2</span>
+
+<span class="n">tail</span> <span class="o">+</span><span class="mi">2</span> <span class="nb">file</span> <span class="o">&gt;</span> <span class="n">file2</span>                            <span class="c1"># remove first line from file</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="o">*.</span><span class="n">cxx</span><span class="p">;</span> <span class="n">do</span> <span class="n">mv</span> <span class="err">$</span><span class="mi">1</span> <span class="err">$</span><span class="p">{</span><span class="n">i</span><span class="o">%%.</span><span class="n">cxx</span><span class="p">}</span><span class="o">.</span><span class="n">cpp</span><span class="p">;</span> <span class="n">done</span>   <span class="c1"># .cxx to cpp</span>
+
+<span class="n">grep</span> <span class="s2">&quot;Failed password&quot;</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">autho</span><span class="o">.</span><span class="n">log</span>
+<span class="n">grep</span> <span class="s2">&quot;Failed&quot;</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">secure</span> <span class="o">|</span> <span class="n">awk</span> <span class="s1">&#39;{print $11}&#39;</span> <span class="o">|</span> <span class="n">uniq</span> <span class="o">-</span><span class="n">c</span> <span class="o">|</span> <span class="n">sort</span> <span class="o">-</span><span class="n">nr</span>
+<span class="n">grep</span> <span class="o">-</span><span class="n">m</span> <span class="n">NUM</span>                                     <span class="c1"># stop reading a file after NUM matching lines</span>
+<span class="n">grep</span> <span class="o">-</span><span class="n">v</span>                                         <span class="c1"># --invert-match, select non-matching lines</span>
+<span class="n">grep</span> <span class="o">-</span><span class="n">L</span>                                         <span class="c1"># --files-without-match, print filenames</span>
+<span class="n">grep</span> <span class="o">-</span><span class="n">e</span> <span class="n">w1</span> <span class="o">-</span><span class="n">e</span> <span class="n">w2</span>                                <span class="c1"># muultiple matches</span>
+
+<span class="n">awk</span> <span class="s1">&#39;!/foo/&#39;</span>                                    <span class="c1"># not matching foo</span>
+<span class="n">awk</span> <span class="s1">&#39;!/foo/ &amp;&amp; !/bar/&#39;</span>
+<span class="n">awk</span> <span class="s1">&#39;!/foo/ &amp;&amp; !/bar/ &amp;&amp; (/foo2/ || /bar2/)&#39;</span>
+
+<span class="n">sed</span> <span class="s1">&#39;s/str1/str2/g&#39;</span>                             <span class="c1"># replace str1 w str2</span>
+<span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s/str1/str1/g&#39;</span> <span class="o">*.</span><span class="n">txt</span>
+<span class="n">sed</span> <span class="s1">&#39;/&lt;p&gt;/,/&lt;\/p&gt;/d&#39;</span> <span class="n">t</span><span class="o">.</span><span class="n">html</span>                     <span class="c1"># delete lines start and end w &lt;p&gt;</span>
+<span class="n">sed</span> <span class="s1">&#39;s/[ </span><span class="se">\t</span><span class="s1">]*$//&#39;</span>                               <span class="c1"># remove trailing spaces</span>
+<span class="n">sed</span> <span class="s1">&#39;/ *#/d; /^ *$/d&#39;</span>                           <span class="c1"># rem comments and blank lines</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-65'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-65'>#</a>
+      </div>
+      <p>unixcommand referenced from <a href="http://cb.vu/unixtoolbox.xhtml">Unixtoolbox</a></p>
+<p>made by <a href="https://pycco-docs.github.io/pycco/">Pycco</a></p>
+<p><a href="http://d.fogtown.us/">Home</a></p>
+<p>Only the disciplined ones in life are free. If you are undisciplined, you are a slave to your moods and your passions.   </p>
+<p>Eliud Kipchoge</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+</div>
+</body>
