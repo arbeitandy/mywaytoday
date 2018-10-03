@@ -19,6 +19,17 @@ Dockerfile for running jupiter
 """
 
 
+# === Day1 Section 7 ===
+
+"""
+use gcp datalab directly (not free)
+https://cloud.google.com/datalab/docs/quickstart
+"""
+gcloud components update
+gcloud components install datalab
+datalab create lets_data
+open http://localhost:8081
+datalab delete --delete-disk instance-name
 """
 made by [Pycco][pycco]
 
