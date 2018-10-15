@@ -246,6 +246,27 @@ heapq.nlargest(k, nums)[-1]
 
 # === anecdote ===
 
+# system resources:
+
+    allocated heap memory
+    thread of execution
+    open socket
+    open file
+    locked mutex
+    disk space
+    database connection
+
+# data measurement
+
+    volume
+    velocity
+    variety
+
+# http
+
+4xx client error
+5xx server error
+
 # Powers of two table
 
 Power           Exact Value         Approx Value        Bytes
@@ -356,7 +377,43 @@ dstat --vm                                          # virtual memory
 ps -eo pcpu,pmem,pid,ppid,user,stat,args \
     | sort -k2 -r | head                            # sort by MEM
 
+# file
+
+stat filename                                       # file/inode information
+id -u                                               # uid of current user
+id -g                                               # gid
+
+ls -l                                               # all bit
+    -rw-rw-rw-
+    1st char: file type
+    -   Regular file
+    b   Block special file
+    c   Character special file
+    d   Directory
+    l   Symbolic link
+    n   Network file
+    p   FIFO
+    s   Socket
+
+    next:
+    S   not executable and SUID/SGID mode is set
+    s   executable and SUID/SGID mode is set
+    x   executable
+    T   sticky bit is set (mode 1000) not excute or search permission
+    t   sticky bit is set and is searchable or executable
+
+    next 9 chars: permission: owner/group/world
+
+    r   Permission to read file
+    w   Permission to write to file
+    x   Permission to execute file
+    a   Archive bit is on
+    c   Compressed file
+    s   System file
+    h   Hidden file
+
 # file permission
+
 
 chmod 640 /var/log/maillog
 chmod u=rw,g=r,o= /var/log/maillog
@@ -369,6 +426,23 @@ using setuid, sgid or chmod 4700 file,
 or chmod 2700 or chmod g+s, chmod u+s. 
 Allow the file being executed to be executed with the privileges of the owner or the group. 
 
+# SUID/setuid
+    - the unix access right flags that allow users to run an executable 
+    with the permission of the executable's owner (or group if GUID set)
+    - SUID 4701
+        - to provide temporarily elevated privileges.
+        - user can change their own password without root
+        - chmod 6711 file   # setuid 4, setgid 2
+        - chmod 0711 file   # normal
+    - SGID 2770 for directories 
+        - all new directories below this directory will belong to common group
+    - Sticky bit 1770 for directories
+        - group cannot remove file created by other user
+    - Sticky bit 3171 with SGID for dir
+        - user cannot delete/rename/move subdir and file in subdir created by other user
+        - but the user can edit the file in this dir
+        - if sticky bit is not set, the same group user can do anything
+        
 * OOM killer: Out of memory
 
 /proc/cpuinfo
@@ -431,6 +505,11 @@ lsof -i                                             # all internet conn
 netstat -anp --udp --tcp | grep LISTEN
 netstat -tup                                        # active conn
 netstat -tupl                                       # listening ports
+iftop                                               # networkthroughput
+netstat -c 5                                        # connections 
+netstat -I en0 -c 5                                 # throughput
+netstat -at                                         # TCP ports connection
+netstat -au                                         # UDP connection
 
 sudo iptables -L -n -v                              # firewall status
 sudo iptables -P INPUT ACCEPT                       # open everything
