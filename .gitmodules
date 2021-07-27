@@ -1,3 +1,0 @@
-[submodule "submodule/init.home"]
-	path = submodule/init.home
-	url = git@bitbucket.org:arbeitandy/init.home.git
