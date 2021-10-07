@@ -1,0 +1,36 @@
+# Create a virtual environment with all tools installed
+# ref: https://hub.docker.com/_/ubuntu
+FROM ubuntu:20.04 AS env
+
+#############
+##  SETUP  ##
+#############
+RUN apt update -qq \
+&& DEBIAN_FRONTEND=noninteractive apt install -yq \
+ git pkg-config wget make cmake autoconf libtool zlib1g-dev gawk g++ curl git \
+ lsb-release \
+&& apt clean \
+&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+ENTRYPOINT ["/usr/bin/bash", "-c"]
+
+# Swig Install
+RUN apt-get update -qq \
+&& apt-get install -yq tmux \
+&& apt-get clean \
+&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+RUN whoami
+ENV TZ=America/Los_Angeles
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+################
+##  OR-TOOLS  ##
+################
+FROM env AS devel
+ENV SRC_GIT_SHA1 ${SRC_GIT_SHA1:-unknown}
+WORKDIR /root
+#RUN rm -rf /usr/share/nginx/html
+#COPY html_output /usr/share/nginx/html
+#COPY assets /usr/share/nginx/html/assets
+# docker build --no-cache -t helloapp:v2 -f dockerfiles/u20_Dockerfile context
+# docker system prune
